@@ -1,4 +1,9 @@
-# Smart Podcast Generation from Academic Research Papers
+# 🎙️ Smart Podcast Generation from Academic Research Papers
+
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
+![Groq](https://img.shields.io/badge/Groq-API-green)
+![License](https://img.shields.io/badge/License-Academic-orange)
 
 ## Overview
 
