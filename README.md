@@ -1,137 +1,138 @@
 # 🎙️ Smart Podcast Generation from Academic Research Papers
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Streamlit](https://img.shields.io/badge/Streamlit-App-red)
-![Groq](https://img.shields.io/badge/Groq-API-green)
-![License](https://img.shields.io/badge/License-Academic-orange)
-
-## Overview
-
-Smart Podcast Generation from Academic Research Papers is a Generative AI-powered system that transforms research papers into podcast-style content. The system analyzes research papers, identifies research gaps, generates conversational podcast scripts, and produces supporting content such as show notes, key terms, and timestamps.
-
-The objective is to improve research accessibility and science communication by enabling users to consume research papers in an engaging and easy-to-understand format.
+A Generative AI-powered application that converts academic research papers into engaging podcast-style content. The system analyzes research papers, identifies research gaps, simplifies technical concepts, and generates conversational podcast scripts along with supporting resources such as show notes, timestamps, key terms, and downloadable documents.
 
 ---
 
-## Problem Statement
+## 📖 Overview
 
-The growing volume of research publications makes it challenging to communicate scientific findings effectively. Research papers are often lengthy, highly technical, and difficult for non-specialists to understand.
+Academic research papers are often lengthy and difficult for non-specialists to understand. This project leverages Large Language Models (LLMs) and Natural Language Processing (NLP) techniques to transform complex research papers into easy-to-understand podcast-style content.
 
-This project addresses the problem by automatically converting research papers into podcast-style content, making scientific knowledge more accessible and easier to consume.
-
----
-
-## Features
-
-* Research Paper PDF Upload
-* PDF Text Extraction
-* Research Paper Analysis
-* Research Gap Identification
-* Dataset-Guided Content Simplification
-* Podcast Script Generation
-* Show Notes Generation
-* Key Terms Extraction
-* Timestamp Generation
-* DOCX Export
-* Multiple Podcast Styles
+The application improves accessibility to scientific research by enabling users to consume research through engaging audio-based content.
 
 ---
 
-## System Workflow
+## 🚀 Features
 
-Research Paper PDF
+- 📄 Upload Research Papers in PDF format
+- 🔍 Extract text from PDF documents
+- 🧠 Analyze research papers using Llama 3.3 70B
+- 📊 Identify research gaps
+- 📚 Simplify technical content using a Scientific Lay Summarisation dataset
+- 🎙️ Generate podcast-style conversational scripts
+- 📝 Generate show notes
+- 🏷️ Extract important key terms
+- ⏱️ Automatically generate timestamps
+- 📄 Export podcast content as DOCX
+- 🔊 Generate audio using Google Text-to-Speech (gTTS)
+- 🎧 Support for multiple podcast presentation styles
 
-↓
+---
 
+## 🎯 Problem Statement
+
+The rapid growth of scientific publications has made it increasingly difficult for researchers, students, and the general public to consume and understand academic literature.
+
+Research papers are often:
+- Highly technical
+- Time-consuming to read
+- Difficult for non-domain experts
+
+This project addresses these challenges by automatically converting research papers into podcast-style content, making scientific knowledge more accessible and engaging.
+
+---
+
+## ⚙️ System Workflow
+
+```text
+Research Paper (PDF)
+        │
+        ▼
 PDF Text Extraction
-
-↓
-
+        │
+        ▼
 Research Paper Analysis
-
-↓
-
+        │
+        ▼
 Research Gap Detection
-
-↓
-
-Scientific Lay Summarisation Dataset Integration
-
-↓
-
+        │
+        ▼
+Scientific Lay Summarisation
+        │
+        ▼
 Podcast Script Generation
-
-↓
-
+        │
+        ▼
 Show Notes + Key Terms + Timestamps
-
-↓
-
+        │
+        ▼
 DOCX Export
-
-↓
-
+        │
+        ▼
 Audio Generation
+```
 
 ---
 
-## Dataset Used
+## 📂 Dataset Used
 
 ### Scientific Lay Summarisation Dataset
 
-Source:
+**Source**
 
 https://huggingface.co/datasets/pszemraj/scientific_lay_summarisation-plos-norm
 
-Dataset Characteristics:
+### Dataset Highlights
 
-* 24,000+ Scientific Articles
-* Human-Written Layman Summaries
-* Designed for scientific content simplification
+- 24,000+ scientific research articles
+- Human-written layman summaries
+- Designed for scientific content simplification
 
-Purpose:
+### Purpose
 
-The dataset is used to provide examples of how complex scientific content can be transformed into simpler and more understandable explanations. These examples guide podcast generation and improve content accessibility.
-
----
-
-## Technologies Used
-
-| Technology            | Purpose                                |
-| --------------------- | -------------------------------------- |
-| Streamlit             | User Interface                         |
-| PyPDF                 | PDF Text Extraction                    |
-| Llama 3.3 70B         | Research Analysis & Podcast Generation |
-| Groq API              | Model Inference                        |
-| Hugging Face Datasets | Dataset Integration                    |
-| python-docx           | DOCX Export                            |
-| gTTS                  | Audio Generation                       |
+The dataset provides examples of transforming complex scientific language into simpler explanations. These examples guide the AI model in generating podcast content that is easier for a wider audience to understand.
 
 ---
 
-## Model Used
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Core Programming Language |
+| Streamlit | User Interface |
+| PyPDF | PDF Text Extraction |
+| Llama 3.3 70B | Research Analysis & Podcast Generation |
+| Groq API | Model Inference |
+| Hugging Face Datasets | Scientific Dataset Integration |
+| python-docx | DOCX Export |
+| gTTS | Audio Generation |
+
+---
+
+## 🤖 AI Model
 
 ### Llama 3.3 70B
 
-Provider: Meta AI
+**Provider:** Meta AI
 
-Accessed Through: Groq API
+**Accessed via:** Groq API
 
-Applications:
+### Used For
 
-* Research Paper Analysis
-* Research Gap Detection
-* Podcast Script Generation
-* Show Notes Generation
-* Timestamp Creation
-* Key Terms Extraction
+- Research paper analysis
+- Research gap detection
+- Scientific content simplification
+- Podcast script generation
+- Show notes generation
+- Timestamp generation
+- Key term extraction
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```text
-project/
+Podcast-Generator/
 │
 ├── app.py
 ├── requirements.txt
@@ -139,39 +140,46 @@ project/
 ├── generated_docs/
 ├── generated_audio/
 ├── sample_papers/
-└── dataset/
+├── dataset/
+└── images/
 ```
 
 ---
 
-## Installation
+## 💻 Installation
 
-### Clone Repository
+### Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/repository-name.git
-cd repository-name
+git clone https://github.com/01fe23bcs182/Podcast-Generator.git
+cd Podcast-Generator
 ```
 
-### Create Virtual Environment
+---
+
+### Create a Virtual Environment
 
 ```bash
 python -m venv venv
 ```
 
-### Activate Environment
+---
 
-Windows:
+### Activate the Environment
+
+**Windows**
 
 ```bash
 venv\Scripts\activate
 ```
 
-Linux / Mac:
+**Linux / macOS**
 
 ```bash
 source venv/bin/activate
 ```
+
+---
 
 ### Install Dependencies
 
@@ -181,65 +189,106 @@ pip install -r requirements.txt
 
 ---
 
-## Environment Variables
+## 🔑 Environment Variables
 
-Create a `.env` file:
+Create a `.env` file in the project root and add your Groq API key:
 
 ```env
-GROQ_API_KEY=your_api_key_here
+GROQ_API_KEY=your_groq_api_key
 ```
+
+> **Note:** Never upload your `.env` file or API keys to GitHub.
 
 ---
 
-## Run Application
+## ▶️ Run the Application
 
 ```bash
 streamlit run app.py
 ```
 
-Application will be available at:
+The application will start locally at:
 
-```text
+```
 http://localhost:8501
 ```
 
 ---
 
-## Future Enhancements
+## 📸 Screenshots
 
-* MP3 Podcast Generation
-* Advanced Dataset Retrieval
-* Multi-Language Podcast Support
-* Voice Customization
-* Cloud Deployment
-* User Authentication
+Add screenshots of your application inside an `images/` folder.
 
----
+Example:
 
-## Expected Impact
+```text
+images/
+├── home.png
+├── upload.png
+├── output.png
+```
 
-The system aims to:
+Then display them like this:
 
-* Improve accessibility of scientific research
-* Reduce time required to understand research papers
-* Support science communication
-* Enable audio-based research consumption
-* Assist students, researchers, and professionals
+```markdown
+### Home Page
 
----
+![Home](images/home.png)
 
-## Team
+### Generated Podcast
 
-Project Title:
-
-**Smart Podcast Generation from Academic Research Papers**
-
-Domain:
-
-Generative AI | Natural Language Processing | Science Communication
+![Output](images/output.png)
+```
 
 ---
 
-## License
+## 🌟 Future Enhancements
 
-This project is developed for academic and hackathon purposes.
+- Multi-language podcast generation
+- Voice customization
+- MP3 download support
+- Advanced dataset retrieval
+- Cloud deployment
+- User authentication
+- Interactive podcast player
+
+---
+
+## 🎯 Expected Impact
+
+This project aims to:
+
+- Improve accessibility to scientific research
+- Simplify complex academic literature
+- Promote science communication
+- Enable audio-based research consumption
+- Support students, researchers, educators, and professionals
+
+---
+
+## 👨‍💻 Project Information
+
+**Project Title**
+
+Smart Podcast Generation from Academic Research Papers
+
+**Domain**
+
+- Generative AI
+- Natural Language Processing (NLP)
+- Large Language Models (LLMs)
+- Science Communication
+
+---
+
+## 📌 Notes
+
+This project was developed for academic learning and hackathon purposes.
+
+API keys have been excluded from the repository for security reasons.
+
+---
+
+## 📄 License
+
+This project is intended for educational and research purposes.
