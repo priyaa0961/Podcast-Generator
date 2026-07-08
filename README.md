@@ -215,33 +215,6 @@ http://localhost:8501
 
 ---
 
-## 📸 Screenshots
-
-Add screenshots of your application inside an `images/` folder.
-
-Example:
-
-```text
-images/
-├── home.png
-├── upload.png
-├── output.png
-```
-
-Then display them like this:
-
-```markdown
-### Home Page
-
-![Home](images/home.png)
-
-### Generated Podcast
-
-![Output](images/output.png)
-```
-
----
-
 ## 🌟 Future Enhancements
 
 - Multi-language podcast generation
